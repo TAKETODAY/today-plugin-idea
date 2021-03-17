@@ -1,0 +1,36 @@
+<idea-plugin>
+  <id>cn.taketoday.today-plugin-idea</id>
+  <name>TODAY</name>
+  <vendor email="taketoday@foxmail.com" url="https://taketoday.cn">TODAY</vendor>
+  <version>1.0</version>
+  <idea-version since-build="193" />
+  <category>Tools Integration</category>
+  <description>
+    <![CDATA[
+        <p> TODAY Framework Integration </p>
+        <p>See more: <a href="https://taketoday.cn">TODAY</a> </p>
+    ]]>
+  </description>
+
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+
+    <!-- <applicationConfigurable groupId="tools" displayName="TODAY Framework Integration" id="TODAY.Framework.Plugin"
+           instance="DefaultSettingConfigurable"/> -->
+
+    <projectService serviceInterface="cn.taketoday.plugin.web.WebApplication"
+        serviceImplementation="cn.taketoday.plugin.web.impl.DefaultWebApplication" />
+  </extensions>
+
+  <actions>
+
+    <!-- Add your actions here -->
+    <action id="cn.taketoday.plugin.action.TestAction" class="cn.taketoday.plugin.action.TestAction" text="Pop Dialog Action"
+        description="test action">
+      <add-to-group group-id="ToolsMenu" anchor="first" />
+    </action>
+  </actions>
+</idea-plugin>

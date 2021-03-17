@@ -1,2 +1,1 @@
-# today-plugin-idea
-idea plugin 
+# TODAY Framework IntelliJ Plugin
